@@ -1,7 +1,6 @@
-Use TechShop
 --Task1.1-Create the DataBase
 --create database TechShop
-
+Use TechShop
 --Task1.2,1.3,1.4-Create Tables&keys
 --CREATE TABLE "Customers" (CustomerID INT IDENTITY(1,1) PRIMARY KEY, FirstName VARCHAR(50),LastName VARCHAR(50),Email VARCHAR(100) UNIQUE,Phone VARCHAR(15),Address TEXT);
 --CREATE TABLE "Products" (ProductID INT IDENTITY(1,1) PRIMARY KEY,ProductName VARCHAR(100),Description TEXT,Price DECIMAL(10,2));
