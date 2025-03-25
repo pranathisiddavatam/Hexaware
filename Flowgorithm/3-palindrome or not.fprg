@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="3"/>
+        <attribute name="authors" value="prana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-13 01:24:46 PM"/>
+        <attribute name="created" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzsxMjo1MToyNSBQTTsyNDA1"/>
+        <attribute name="edited" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzswMToyNDo0NiBQTTsxOzI1MTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, rev, sum, k" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the Number&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="k" expression="num"/>
+            <assign variable="sum" expression="0"/>
+            <while expression="num!=0">
+                <assign variable="rev" expression="num%10"/>
+                <assign variable="num" expression="num/10"/>
+                <assign variable="sum" expression="(sum*10)+rev"/>
+            </while>
+            <if expression="sum==k">
+                <then>
+                    <output expression="k &amp; &quot; is a palindrome&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="k &amp; &quot; is not a palindrome&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

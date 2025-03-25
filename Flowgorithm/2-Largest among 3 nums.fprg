@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2"/>
+        <attribute name="authors" value="prana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-13 12:51:20 PM"/>
+        <attribute name="created" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzsxMjo0NToxOSBQTTsyNDEx"/>
+        <attribute name="edited" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzsxMjo1MToyMCBQTTsxOzI1MDg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, num3" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number1&quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;Enter the number2&quot;" newline="True"/>
+            <input variable="num2"/>
+            <output expression="&quot;Enter the number3&quot;" newline="True"/>
+            <input variable="num3"/>
+            <if expression="num1&gt;num2 and num1&gt;num3">
+                <then>
+                    <output expression="num1 &amp; &quot; is the largest number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="num2&gt;num1 and num2&gt;num3">
+                        <then>
+                            <output expression="num2 &amp; &quot;is the largest number&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="num3 &amp; &quot; is the largest number&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="5"/>
+        <attribute name="authors" value="prana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-13 01:49:43 PM"/>
+        <attribute name="created" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzswMTo0MDozMiBQTTsyMzk5"/>
+        <attribute name="edited" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzswMTo0OTo0MyBQTTsxOzI1MTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, div, fact" type="Integer" array="False" size=""/>
+            <assign variable="fact" expression="0"/>
+            <output expression="&quot;Enter the Number&quot;" newline="True"/>
+            <input variable="num"/>
+            <for variable="div" start="1" end="num" direction="inc" step="1">
+                <if expression="num%div=0">
+                    <then>
+                        <assign variable="fact" expression="fact+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="fact=2">
+                <then>
+                    <output expression="num &amp; &quot; is a prime number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="num &amp; &quot; is not a prime number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

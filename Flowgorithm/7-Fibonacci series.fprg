@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="7"/>
+        <attribute name="authors" value="prana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-13 02:17:52 PM"/>
+        <attribute name="created" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzswMjowODo1MyBQTTsyNDA3"/>
+        <attribute name="edited" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzswMjoxNzo1MiBQTTsxOzI1MTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, n1, n2, n3, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="n1" expression="0"/>
+            <assign variable="n2" expression="1"/>
+            <assign variable="i" expression="0"/>
+            <output expression="n1" newline="True"/>
+            <output expression="n2" newline="True"/>
+            <while expression="i&lt;num">
+                <assign variable="n3" expression="n1+n2"/>
+                <assign variable="n1" expression="n2"/>
+                <assign variable="n2" expression="n3"/>
+                <output expression="n3" newline="True"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

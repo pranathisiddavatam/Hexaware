@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="6"/>
+        <attribute name="authors" value="prana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-13 02:04:39 PM"/>
+        <attribute name="created" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzswMTo0OTo1NSBQTTsyNDEz"/>
+        <attribute name="edited" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzswMjowNDozOSBQTTsxOzI1MTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, k, l, m, sum, add, r" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a number&quot;" newline="True"/>
+            <input variable="a"/>
+            <assign variable="k" expression="a"/>
+            <assign variable="l" expression="a"/>
+            <assign variable="m" expression="a"/>
+            <assign variable="sum" expression="0"/>
+            <while expression="a!=0">
+                <assign variable="r" expression="a%10"/>
+                <assign variable="a" expression="a/10"/>
+                <assign variable="sum" expression="sum+1"/>
+            </while>
+            <assign variable="add" expression="0"/>
+            <while expression="k!=0">
+                <assign variable="r" expression="k%10"/>
+                <assign variable="k" expression="k/10"/>
+                <assign variable="add" expression="add+r^sum"/>
+            </while>
+            <if expression="add==l">
+                <then>
+                    <output expression="m &amp; &quot; is an armstrong number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="m &amp; &quot; is not an armstrong number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

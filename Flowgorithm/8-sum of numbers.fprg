@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="8"/>
+        <attribute name="authors" value="prana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-13 03:41:20 PM"/>
+        <attribute name="created" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzswMzozNjozMSBQTTsyNDA1"/>
+        <attribute name="edited" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzswMzo0MToyMCBQTTsxOzI1MDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, i, sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <output expression="&quot;Enter the number of elements&quot;" newline="True"/>
+            <input variable="num"/>
+            <declare name="a" type="Integer" array="True" size="num"/>
+            <output expression="&quot;Enter the elements&quot;" newline="True"/>
+            <for variable="i" start="0" end="num-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="num-1" direction="inc" step="1">
+                <assign variable="sum" expression="sum+a[i]"/>
+            </for>
+            <output expression="&quot;Sum of the elements &quot; &amp; sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

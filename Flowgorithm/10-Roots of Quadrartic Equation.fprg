@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="10"/>
+        <attribute name="authors" value="prana"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-13 03:06:55 PM"/>
+        <attribute name="created" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzswMjoxNzo1NSBQTTsyNDA5"/>
+        <attribute name="edited" value="cHJhbmE7UFJBTkFUSEk7MjAyNS0wMy0xMzswMzowNjo1NSBQTTsxOzI1MTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Enter the coefficients a,b and c of the quadratic equation&quot;" newline="True"/>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <declare name="x1, x2" type="Real" array="False" size=""/>
+            <declare name="D" type="Real" array="False" size=""/>
+            <assign variable="D" expression="b^2-4*a*c"/>
+            <assign variable="x1" expression="(-b-Sqrt(D))/(2*a)"/>
+            <assign variable="x2" expression="(-b+Sqrt(D))/(2*a)"/>
+            <output expression="&quot;Roots of the quadratic equation are &quot; &amp; x1 &amp; &quot; and &quot; &amp; x2 &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
