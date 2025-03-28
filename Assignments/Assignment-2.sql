@@ -15,7 +15,8 @@ USE SISDB;
 ('Grace', 'Taylor', '2001-06-12', 'grace.taylor@example.com', '9876543216'),
 ('Sophia', 'Anderson', '2002-12-05', 'sophia.anderson@example.com', '9876543217'),
 ('James', 'Thomas', '1998-08-19', 'james.thomas@example.com', '9876543218'),
-('Olivia', 'Harris', '2004-04-28', 'olivia.harris@example.com', '9876543219');INSERT INTO Teacher (first_name, last_name, email) VALUES
+('Olivia', 'Harris', '2004-04-28', 'olivia.harris@example.com', '9876543219');
+INSERT INTO Teacher (first_name, last_name, email) VALUES
 ('Michael', 'Williams', 'michael.williams@example.com'),
 ('Emma', 'Davis', 'emma.davis@example.com'),
 ('Daniel', 'Clark', 'daniel.clark@example.com'),
