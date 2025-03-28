@@ -5,7 +5,7 @@ USE SISDB;
 --CREATE TABLE Enrollments (enrollment_id INT IDENTITY(1,1) PRIMARY KEY,student_id INT,course_id INT,enrollment_date DATE NOT NULL,FOREIGN KEY (student_id) REFERENCES Students(student_id) ON DELETE CASCADE,FOREIGN KEY (course_id) REFERENCES Courses(course_id) ON DELETE CASCADE);
 --CREATE TABLE Teacher (teacher_id INT IDENTITY(1,1) PRIMARY KEY,first_name VARCHAR(50) NOT NULL,last_name VARCHAR(50) NOT NULL,email VARCHAR(100) UNIQUE NOT NULL);
 --CREATE TABLE Payments (payment_id INT IDENTITY(1,1) PRIMARY KEY,student_id INT,amount DECIMAL(10,2) NOT NULL CHECK (amount > 0),payment_date DATE NOT NULL,FOREIGN KEY (student_id) REFERENCES Students(student_id) ON DELETE CASCADE);
-/*INSERT INTO Students (first_name, last_name, date_of_birth, email, phone_number) VALUES
+INSERT INTO Students (first_name, last_name, date_of_birth, email, phone_number) VALUES
 ('John', 'Doe', '2002-05-15', 'john.doe@example.com', '9876543210'),
 ('Alice', 'Smith', '2001-09-22', 'alice.smith@example.com', '9876543211'),
 ('Bob', 'Brown', '2000-07-18', 'bob.brown@example.com', '9876543212'),
@@ -120,9 +120,9 @@ JOIN Enrollments e ON s.student_id = e.student_id
 JOIN Courses c ON e.course_id = c.course_id;
 
 -- Task 3.5: List teachers and the courses they are assigned to
-/*SELECT t.first_name, t.last_name, c.course_name  
+SELECT t.first_name, t.last_name, c.course_name  
 FROM Teacher t  
-LEFT JOIN Courses c ON t.teacher_id = c.teacher_id;*/
+LEFT JOIN Courses c ON t.teacher_id = c.teacher_id;
 
 -- Task 3.6: List students and their enrollment dates for a specific course (course_id = 3)
 SELECT s.first_name, s.last_name, e.enrollment_date  
@@ -236,4 +236,4 @@ GROUP BY c.course_name;
 -- Task 4.13: Calculate average payment amount made by students
 SELECT AVG(p.amount) AS avg_payment  
 FROM Payments p;
-*/
+
