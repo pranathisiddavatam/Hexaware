@@ -49,7 +49,7 @@ CREATE TABLE Art.Gallery (
     FOREIGN KEY (CuratorID) REFERENCES Artist(ArtistID) ON DELETE CASCADE
 );
 
--- Create User_Favorite_Artwork Junction Table
+-- Create Favorite Artwork Table
 CREATE TABLE Art.User_Favorite_Artwork (
     UserID INT NOT NULL,
     ArtworkID INT NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE Art.User_Favorite_Artwork (
     FOREIGN KEY (ArtworkID) REFERENCES Artwork(ArtworkID) ON DELETE NO ACTION
 );
 
--- Create Artwork_Gallery Junction Table
+-- Create Artwork_Gallery Table
 CREATE TABLE Art.Artwork_Gallery (
     ArtworkID INT NOT NULL,
     GalleryID INT NOT NULL,
