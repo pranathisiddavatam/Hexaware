@@ -155,4 +155,3 @@ LEFT JOIN info.Suspect S ON C.CrimeID = S.CrimeID;
 
 -- Task 20: List all suspects involved in 'Robbery' or 'Assault'
 SELECT * FROM Suspect WHERE CrimeID IN (SELECT CrimeID FROM Crime WHERE IncidentType IN ('Robbery', 'Assault'));
-*/
