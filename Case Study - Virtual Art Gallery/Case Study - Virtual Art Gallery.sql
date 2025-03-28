@@ -2,8 +2,9 @@
 --GO
 USE VirtualArtGallery;
 GO
+CREATE SCHEMA Art
 -- Create Artist Table
-CREATE TABLE Artist (
+CREATE TABLE Art.Artist (
     ArtistID INT IDENTITY(1,1) PRIMARY KEY,
     Name VARCHAR(255) NOT NULL,
     Biography TEXT,
@@ -14,7 +15,7 @@ CREATE TABLE Artist (
 );
 
 -- Create Artwork Table
-CREATE TABLE Artwork (
+CREATE TABLE Art.Artwork (
     ArtworkID INT IDENTITY(1,1) PRIMARY KEY,
     Title VARCHAR(255) NOT NULL,
     Description TEXT,
@@ -26,7 +27,7 @@ CREATE TABLE Artwork (
 );
 
 -- Create User Table
-CREATE TABLE [User] (
+CREATE TABLE Art.Users (
     UserID INT IDENTITY(1,1) PRIMARY KEY,
     Username VARCHAR(100) UNIQUE NOT NULL,
     Password VARCHAR(255) NOT NULL,
@@ -38,7 +39,7 @@ CREATE TABLE [User] (
 );
 
 -- Create Gallery Table
-CREATE TABLE Gallery (
+CREATE TABLE Art.Gallery (
     GalleryID INT IDENTITY(1,1) PRIMARY KEY,
     Name VARCHAR(255) NOT NULL,
     Description TEXT,
@@ -48,8 +49,8 @@ CREATE TABLE Gallery (
     FOREIGN KEY (CuratorID) REFERENCES Artist(ArtistID) ON DELETE CASCADE
 );
 
--- Create User_Favorite_Artwork Junction Table (Fixed)
-CREATE TABLE User_Favorite_Artwork (
+-- Create User_Favorite_Artwork Junction Table
+CREATE TABLE Art.User_Favorite_Artwork (
     UserID INT NOT NULL,
     ArtworkID INT NOT NULL,
     PRIMARY KEY (UserID, ArtworkID),
@@ -57,8 +58,8 @@ CREATE TABLE User_Favorite_Artwork (
     FOREIGN KEY (ArtworkID) REFERENCES Artwork(ArtworkID) ON DELETE NO ACTION
 );
 
--- Create Artwork_Gallery Junction Table (Fixed)
-CREATE TABLE Artwork_Gallery (
+-- Create Artwork_Gallery Junction Table
+CREATE TABLE Art.Artwork_Gallery (
     ArtworkID INT NOT NULL,
     GalleryID INT NOT NULL,
     PRIMARY KEY (ArtworkID, GalleryID),
