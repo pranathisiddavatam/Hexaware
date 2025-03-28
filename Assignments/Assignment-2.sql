@@ -68,7 +68,7 @@ INSERT INTO SIS.Payments (student_id, amount, payment_date) VALUES
 INSERT INTO SIS.Students (first_name, last_name, date_of_birth, email, phone_number)  
 VALUES ('John', 'Doe', '1995-08-15', 'john.doe2@example.com', '1234567890');
 
--- Task 2.2: Enroll a student in a course (Assuming student_id = 1 and course_id = 2 exist)
+-- Task 2.2: Enroll a student in a course 
 INSERT INTO SIS.Enrollments (student_id, course_id, enrollment_date)  
 VALUES (1, 2, GETDATE());
 
