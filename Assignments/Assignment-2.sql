@@ -127,7 +127,7 @@ SELECT t.first_name, t.last_name, c.course_name
 FROM SIS.Teacher t  
 LEFT JOIN SIS.Courses c ON t.teacher_id = c.teacher_id;
 
--- Task 3.6: List students and their enrollment dates for a specific course (course_id = 3)
+-- Task 3.6: List students and their enrollment dates for a specific course
 SELECT s.first_name, s.last_name, e.enrollment_date  
 FROM SIS.Students s  
 JOIN SIS.Enrollments e ON s.student_id = e.student_id  
