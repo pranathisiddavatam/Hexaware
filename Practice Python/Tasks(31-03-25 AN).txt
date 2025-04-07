@@ -1,0 +1,166 @@
+# Task - 1 : Write the  program to calculate the tax
+income = float(input("Enter your taxable income: "))
+if income <= 150000:
+    tax = 0
+elif income >= 150001 and income <= 300000:
+    tax = 0.10 * (income - 150000)
+elif income >= 300001 and income <= 500000:
+    tax = 0.20 * (income - 300000) + (0.10 * 150000)
+elif income >= 500001:
+    tax = 0.30 * (income - 500000) + (0.20 * 200000) + (0.10 * 150000)
+print("Tax Payable:", round(tax, 2))
+
+# Task - 2 : Write a program to calculate the roots of a quadratic equation.
+import math
+a = float(input("Enter coefficient a: "))
+b = float(input("Enter coefficient b: "))
+c = float(input("Enter coefficient c: "))
+D = (b ** 2) - (4 * a * c)
+if D > 0:
+    root1 = (-b + math.sqrt(D)) / (2 * a)
+    root2 = (-b - math.sqrt(D)) / (2 * a)
+    print("Roots are real and distinct.")
+    print("Root 1:", round(root1, 2))
+    print("Root 2:", round(root2, 2))
+elif D == 0:
+    root = -b / (2 * a)
+    print("Roots are real and equal.")
+    print("Root:", round(root, 2))
+else:
+    real_part = -b / (2 * a)
+    imag_part = math.sqrt(abs(D)) / (2 * a)
+    print("Roots are imaginary.")
+    print("Root 1:", round(real_part, 2), "+", round(imag_part, 2), "i")
+    print("Root 2:", round(real_part, 2), "-", round(imag_part, 2), "i")
+
+# Task - 3 :Write a python program to display the total marks and average of 3 subjects and grade then accordingly.
+sub1 = float(input("Enter marks for Subject 1: "))
+sub2 = float(input("Enter marks for Subject 2: "))
+sub3 = float(input("Enter marks for Subject 3: "))
+total = sub1 + sub2 + sub3
+average = total / 3
+if average >= 80:
+    grade = "A"
+elif average >= 70 and average <= 79:
+    grade = "B"
+elif average >= 60 and average <= 69:
+    grade = "C"
+else:
+    grade = "Fail"
+print("Total Marks:", total)
+print("Average Marks:", round(average, 2))
+print("Grade:", grade)
+
+# Task - 4 :In an organization the bonus for the employees
+salary = float(input("Enter employee's salary: "))
+service = int(input("Enter years of service: "))
+if service >= 10:
+    bonus = 0.10 * salary
+elif service >= 5 and service < 10:
+    bonus = 0.05 * salary
+elif service >= 3 and service < 5:
+    bonus = 0.03 * salary
+else:
+    bonus = 0
+total_salary = salary + bonus
+print("Bonus Amount:", round(bonus, 2))
+print("Total Salary after Bonus:", round(total_salary, 2))
+
+# Task - 5 :Use the arithmetic operators to perform match case statement.
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+operator = input("Enter an operator: ")
+match operator:
+    case '+':
+        print("Result:", num1 + num2)
+    case '-':
+        print("Result:", num1 - num2)
+    case '*':
+        print("Result:", num1 * num2)
+    case '/':
+        print("Result:", num1 / num2 if num2 != 0 else "Error: Division by zero")
+    case _:
+        print("Invalid operator!")
+
+# Task - 6 :Accept the choice of input
+import math
+choice = int(input("Enter 1 for Circle, 2 for Triangle, 3 for Rectangle: "))
+match choice:
+    case 1:
+        r = float(input("Enter the radius of the circle: "))
+        area = math.pi * r * r
+        print("Area of the Circle:", round(area, 2))
+
+    case 2:
+        a = float(input("Enter side a: "))
+        b = float(input("Enter side b: "))
+        c = float(input("Enter side c: "))
+        s = (a + b + c) / 2  # Semi-perimeter
+        area = math.sqrt(s * (s - a) * (s - b) * (s - c))  # Heron's formula
+        print("Area of the Triangle:", round(area, 2))
+
+    case 3:
+        length = float(input("Enter the length: "))
+        width = float(input("Enter the width: "))
+        area = length * width
+        print("Area of the Rectangle:", round(area, 2))
+
+    case _:
+        print("Invalid choice! Please enter 1, 2, or 3.")
+
+# Task - 7 :Write a python program to calculate the sum of numbers from m to n
+m = int(input("Enter the starting number (m): "))
+n = int(input("Enter the ending number (n): "))
+total = sum(range(m, n + 1))
+print("Sum of numbers from", m, "to", n, "is:", total)
+
+# Task - 8 :Write a python program to find if the number entered is amstrong number or not.
+num = int(input("Enter a number: "))
+num_digits = len(str(num))
+sum_of_digits = 0
+temp = num
+while temp > 0:
+    digit = temp % 10
+    sum_of_digits += digit ** num_digits
+    temp //= 10
+if num == sum_of_digits:
+    print(num, "is an Armstrong number.")
+else:
+    print(num, "is NOT an Armstrong number.")
+
+# Task - 9 :Write a program to enter a decimal number. Calculate and display the binary equilant number.
+num = int(input("Enter a decimal number: "))
+binary = ""
+temp = num
+while temp > 0:
+    remainder = temp % 2
+    binary = str(remainder) + binary
+    temp //= 2
+print("Binary equivalent:", binary)
+
+# Task - 10 : Write a python program to find the number palindrome or not.
+num = int(input("Enter a number: "))
+temp = num
+reversed_num = 0
+while temp > 0:
+    digit = temp % 10
+    reversed_num = reversed_num * 10 + digit
+    temp //= 10
+if num == reversed_num:
+    print("Palindrome number")
+else:
+    print("Not a palindrome")
+       (or)
+num = input("Enter a number: ")
+reversed_num = num[::-1]
+if num == reversed_num:
+    print("Palindrome number")
+else:
+    print("Not a palindrome")
+
+
+
+
+
+
+

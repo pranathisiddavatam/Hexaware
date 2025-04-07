@@ -1,0 +1,73 @@
+# Task - 1 : Accept the temparature in celsius and convert the same in farenheit.
+celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print("Temperature in Fahrenheit:", round(fahrenheit, 2))
+
+# Task - 2 : Write a python program to find the area of a cube.
+side = float(input("Enter the side length of the cube: "))
+surface_area = 6 * (side ** 2)
+print("Surface area of the cube: ", round(surface_area, 2))
+
+# Task - 3 :Write a python program to find the area of a cylinder.
+import math
+radius = float(input("Enter the radius of the cylinder: "))
+height = float(input("Enter the height of the cylinder: "))
+surface_area = 2 * math.pi * radius * (radius + height)
+print("Surface area of the cylinder: ", round(surface_area, 2))
+
+# Task - 4 :Write a python program to enter a number and display its hex and octal equivalant values and its square root.
+import math
+num = int(input("Enter a number: "))
+hex_value = hex(num)
+oct_value = oct(num)
+square_root = math.sqrt(num)
+print("Hexadecimal: ", hex_value)
+print("Octal: ", oct_value)
+print("Square Root: ", round(square_root, 2))
+
+# Task - 5 :Write a python program to print the digit at one's place of a number
+num = int(input("Enter a number: "))
+ones_digit = num % 10
+print("Digit at one's place:", ones_digit)
+
+# Task - 6 :Write a python program to print the memory location of two variables and find if the variables are using similar memory space or not.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("Memory location of a:", id(a))
+print("Memory location of b:", id(b))
+if a is b:
+    print("Both variables share the same memory space.")
+else:
+    print("Both variables have different memory spaces.")
+
+# Task - 7 :Write a program to input the radius of the sphere and calculate its volume
+import math
+radius = float(input("Enter the radius of the sphere: "))
+volume = (4/3) * math.pi * (radius ** 3)
+print("Volume of the sphere:", round(volume, 2))
+
+# Task - 8 :Write a python program to calculate the amoount payable after the simple intrest.
+P = float(input("Enter the principal amount: "))
+R = float(input("Enter the rate of interest (per annum): "))
+T = float(input("Enter the time (in years): "))
+SI = (P * R * T) / 100
+total_amount = P + SI
+print("Simple Interest:", round(SI, 2))
+print("Total Amount Payable:", round(total_amount, 2))
+
+# Task - 9 :Write a python program to calculate amount payable after compound intrest.
+P = float(input("Enter the principal amount: "))
+R = float(input("Enter the rate of interest (per annum): "))
+T = float(input("Enter the time (in years): "))
+A = P * (1 + (R / 100)) ** T
+CI = A - P
+print("Compound Interest:", round(CI, 2))
+print("Total Amount Payable:", round(A, 2))
+
+
+
+
+
+
+
+
