@@ -2,6 +2,7 @@ from dao.OrderProcessor import OrderProcessor
 from entity.User import User
 from entity.Electronics import Electronics
 from entity.Clothing import Clothing
+from entity.Product import Product  
 
 def main():
     processor = OrderProcessor()
@@ -21,6 +22,7 @@ def main():
         if choice == "1":
             user = User(int(input("User ID: ")), input("Username: "), input("Password: "), input("Role: "))
             processor.createUser(user)
+            print("User added successfully.")
 
         elif choice == "2":
             uid = int(input("Admin User ID: "))
@@ -48,6 +50,7 @@ def main():
                 )
             user = User(uid, "", "", "Admin")
             processor.createProduct(user, product)
+            print("Product added successfully.")
 
         elif choice == "3":
             uid = int(input("User ID: "))
@@ -63,9 +66,11 @@ def main():
                 p = Product(pid, "", "", 0, qty, "")
                 products.append(p)
             processor.createOrder(user, products)
+            print("Order created successfully.")
 
         elif choice == "4":
             processor.cancelOrder(int(input("User ID: ")), int(input("Order ID: ")))
+            print("Order cancelled successfully.")
 
         elif choice == "5":
             products = processor.getAllProducts()
@@ -75,10 +80,14 @@ def main():
         elif choice == "6":
             user = User(int(input("User ID: ")), "", "", "")
             orders = processor.getOrderByUser(user)
-            for order in orders:
-                print(order)
+            if not orders:
+                print("There are no orders yet from this user.")
+            else:
+                for order in orders:
+                    print(order)
 
         elif choice == "7":
+            print("Exiting...")
             break
 
 if __name__ == "__main__":
